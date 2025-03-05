@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run and Jump Game</title>
+    <style>
+        body { margin: 0; background: #87CEEB; } /* Sky blue background */
+        canvas { display: block; }
+        #scoreDisplay { position: absolute; top: 10px; left: 10px; color: white; font-family: Arial; font-size: 20px; }
+        #gameOver, #storeMenu {
+            display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9); padding: 20px; text-align: center; font-family: Arial;
+            border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="scoreDisplay">Score: 0</div>
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <p>Score: <span id="score"></span></p>
+        <button id="restart">Restart</button>
+        <button id="store">Store</button>
+    </div>
+    <div id="storeMenu">
+        <h1>Store</h1>
+        <p>Total Coins: <span id="totalCoins"></span></p>
+        <button id="buyRed">Buy Red Skin (10 coins)</button>
+        <button id="buyBlue">Buy Blue Skin (10 coins)</button>
+        <button id="back">Back</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
