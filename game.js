@@ -37,7 +37,7 @@ const monsterGeometry = new THREE.CylinderGeometry(0.5, 0.5, 2, 8);
 const monsterMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
 const monster = new THREE.Mesh(monsterGeometry, monsterMaterial);
 scene.add(monster);
-monster.position.set(0, 1, -10); // Start behind player
+monster.position.set(0, 1, -50); // Start behind player
 
 // Ground
 const groundGeometry = new THREE.PlaneGeometry(1000, 1000);
